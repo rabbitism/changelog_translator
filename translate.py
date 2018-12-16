@@ -22,15 +22,11 @@ def standard_translate(word:str):
     with open('results/chinese.json', 'r', encoding='utf-8') as chinese_dict:
         chinese_dictionary = json.loads(chinese_dict.read())
     words = []
-    words_lower = []
     for key in contents.keys():
         words.extend(contents[key])
-    for word in words:
-        words_lower.append(word.lower())
-    print(words_lower)
-    if word in words_lower:
+    if word.strip() in words:
         for key,value in english_dictionary.items():
-            if value.lower() == word:
+            if value == word.strip():
                 if key in chinese_dictionary.keys():
                 #current_key = key
                     return chinese_dictionary[key]
@@ -147,7 +143,7 @@ def translate_line(line:string):
 
 if __name__ == "__main__":
     #extract()
-    #standard_translate("Axe")
+    print(standard_translate("Anti-Mage"))
     #print(translate_line("spell shield magic reduction"))
-    print(translate("strength gain"))
-    print(translate_line("strength gain"))
+    #print(translate("strength gain"))
+    #print(translate_line("strength gain"))

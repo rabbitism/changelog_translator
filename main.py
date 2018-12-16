@@ -26,7 +26,6 @@ def limit(line:str):
         pre_section_translation = translate.translate_line(pre_section)
         from_section_translation = translate.translate_line(from_section)
         to_section_translation = translate.translate_line(to_section)
-        #print(pre_section_translation+"从"+from_section_translation+trend+"至"+to_section_translation)
         return pre_section_translation+"从"+from_section_translation+trend+"至"+to_section_translation
     
 
@@ -46,8 +45,8 @@ def difference(line:str):
         return pre_section_translation+trend+after_section_translation
 
 def other(line:str):
-    #result = translate.standard_translate(line)
-    return "Not Translated"
+    result = translate.standard_translate(line)
+    return result if result != "" else ""
 
 def check_trend(line:str):
     dictionary = {

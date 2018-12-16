@@ -57,4 +57,4 @@ please note encoding might be different on you computer and there are some messy
 
 Such small number of corpus is not enough to support the sentence structure mining in changelog, not saying that I don't have available translated changelog. So my project mainly focus on how to find the phrases frequently used in game and find their corresponding translations.
 
-You can find the strategy in the introduction video.
+You can find the strategy in the introduction video at [YouTube](https://youtu.be/QuOVUQmn95A) or [Bilibili](https://www.bilibili.com/video/av38346676/).
